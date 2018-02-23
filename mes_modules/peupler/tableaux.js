@@ -1,14 +1,84 @@
 "use strict";
-let tableau = [
-				"Montréal",
-				"Paris",
-				"Québec",
-				"Laval",
-				"Bruxelle",
-				"Ottawa",
-				"Calgary",
-				"Gaspé",
-				"Gatineau"
-				];
 
-module.exports = tableau;				
+let tabNom = [
+	    'Martin',
+	    'Marchand',
+	    'Trudeau',
+	    'Lafontaine',
+	    'Gravel',
+	    'Huberdeau',
+	    'Massé',
+	    'St-Pierre',
+	    'Dandurand',
+	    'Hamel',
+	    'Larose',
+	    'Ambroise',
+	    'Kuvel',
+	    'Lamarre',
+	    'Sorel',
+	    'Frapier',
+	    'Archer',
+	    'Dejoie',
+	    'Moïse',
+	    'Fortin',
+	    'Stien',
+	    'Gagnon',
+	    'Chédiac',
+	    'Roy',
+	    'Gagner',
+	    'Larue',
+	    'Lafortune',
+	    'Roffi',
+	    'Cartier',
+	    'Maisonneuve',
+	    'Levesque',
+	    'Talon',
+	    'Bellemarre',
+	    'Mercier'
+];
+
+
+let tabPrenom = [
+    	'Luc',
+    	'Éric',
+    	'François',
+    	'Lyne',
+    	'carolle',
+    	'Sylvie',
+    	'Renée',
+    	'Mathieu',
+    	'Eddy',
+    	'Jean',
+    	'Paul',
+    	'Gustave',
+    	'Rose-Lyne',
+    	'Rose-Lise',
+    	'Rose',
+    	'Xavier',
+    	'Olivier',
+    	'Michel',
+    	'Jean-François',
+    	'Bob',
+    	'Gil',
+    	'Martin',
+    	'Pierre',
+    	'Maxime',
+    	'Léo',
+    	'Léo-Paul',
+    	'Paul',
+    	'Alix',
+    	'Alixe',
+    	'Chantal',
+    	'Christelle',
+    	'Katy',
+    	'Johanne',
+    	'Béatrice',
+    	'Noémie',
+    	'Coralie',
+    	'Pénéloppe',
+    	'Charlotte'
+]
+
+
+module.exports.tabNom = tabNom;
+module.exports.tabPrenom = tabPrenom;
