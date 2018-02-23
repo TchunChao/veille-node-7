@@ -3,9 +3,13 @@ const tableau  = require('./tableaux')
 
 let longTabNom = tableau.tabNom.length
 let longTabPrenom = tableau.tabPrenom.length
+let longTabTelephone = tableau.tabTelephone.length
+let longTabCourriel = tableau.tabCourriel.length
 
 console.log('longTabNom= ' + longTabNom)
 console.log('longTabPrenom= ' + longTabPrenom)
+console.log('longTabTelephone= ' + longTabTelephone)
+console.log('longTabCourriel= ' + longTabCourriel)
 
 const peupler_json = () => {
 
@@ -21,12 +25,11 @@ const peupler_json = () => {
 		position = Math.floor(Math.random()*longTabPrenom);
 		tabPersonne.push(tableau.tabPrenom[position])
 
+		position = Math.floor(Math.random()*longTabTelephone);
+		tabPersonne.push(tableau.tabTelephone[position])
 
-
-
-
-
-
+		position = Math.floor(Math.random()*longTabCourriel);
+		tabPersonne.push(tableau.tabCourriel[position])
 
 		tabToutesLesPersonnes.push(tabPersonne);
   }

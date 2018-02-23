@@ -139,11 +139,22 @@ app.get('/trier/:cle/:ordre', (req, res) => {
 app.get('/peupler', (req,res) =>{
 	//res.resultat = peupler_bd()
 	console.log('peupler')
-	let tableau = peupler();
-	console.log(tableau)
+	let tab = peupler();
+	console.log(tab)
 	for(let i=0; i<10; i++) {
-
+		let tabTemp = tab[i];
+		let personne = {
+			nom:tab[i][0],
+			prenom:tab[i][1],
+			telephone:tab[i][2],
+			courriel:tab[i][3]
+		}
+		console.log(personne)
+		db.collection('adresse').save(personne, (err, result) => {
+		if (err) return console.log(err)
+			console.log('sauvegarder dans la BD')
+			
+		})
 	}
-
 	res.redirect('/adresse')
 })
