@@ -23,15 +23,14 @@ const peupler_json = () => {
 const peupler_bd = (req,res,next) => {
  res.resultat = peupler() 
  console.log('début boucle') 
- for (let elm of res.resultat)
- {
- db.collection('adresse').save(elm, (err, result) => {
- if (err) return console.log(err)
- //console.log('sauvegarder dans la BD') 
- })
+ for (let elm of res.resultat) {
+	db.collection('adresse').save(elm, (err, result) => {
+		if (err) return console.log(err)
+	 	console.log('sauvegarder tableaux dans la BD') 
+	})
  }
  console.log('fin boucle') 
  next()
 }
 
-module.exports = peupler_json
+module.exports = peupler_bd

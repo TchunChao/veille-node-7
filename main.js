@@ -37,6 +37,13 @@ app.get('/', (req, res) => {
  }) 
 })
 
+app.get('/vider', (req, res) => {
+	db.collection('adresse').remove({}, (err, resultat) => {
+		if (err) return console.log(err)
+		 	res.redirect("/adresse")
+		
+	})
+})
 
 app.get('/adresse', (req, res) => {
  console.log('la route route get / = ' + req.url)
@@ -127,4 +134,10 @@ app.get('/trier/:cle/:ordre', (req, res) => {
 		ordre = (req.params.ordre == 'asc' ? "desc":"asc")
  		res.render('adresse.ejs', {adresse: resultat, cle, ordre})
  	})
+})
+
+app.get('/peupler', (req,res) =>{
+	//res.resultat = peupler_bd()
+	console.log('peupler')
+	res.redirect('/adresse')
 })
