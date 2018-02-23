@@ -63,6 +63,21 @@ header.entete {
 
 nav {
     order: 1;
+    h1 {
+      line-height: 2;
+    }
+
+    a {
+      order: 10;
+      line-height: 2.5;
+      padding: 15px;
+      text-decoration: none;
+      color: black;
+    }
+
+    h1:hover, nav a:hover {
+      color: white;
+    }
 }
 
 div.nav-container {
@@ -71,26 +86,10 @@ div.nav-container {
     background-color: none;
     border: none;
     padding: none;
-}
 
-div.nav-container section {
-    display: flex;
-}
-
-nav h1 {
-    line-height: 2;
-}
-
-nav a {
-    order: 10;
-    line-height: 2.5;
-    padding: 15px;
-    text-decoration: none;
-    color: black;
-}
-
-nav h1:hover, nav a:hover {
-    color: white;
+    section {
+      display: flex;
+    }
 }
 
 /*Footer*/
@@ -98,17 +97,14 @@ footer.footer {
     display: flex;
     justify-content: center;
     background-color: #45a049;
-}
-
-footer a {
-    text-decoration: none;
-    color: black;
-}
-
-footer a:hover {
-    color: white;
-}
-
-footer ul {
-    list-style-type: none;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        color: white;
+    }
+    ul {
+      list-style-type: none;
+    }
 }
