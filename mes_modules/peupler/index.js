@@ -1,9 +1,11 @@
 "use strict"
 const tableau  = require('./tableaux')
 
-const max = tableau.length
+let longTabNom = tableau.tabNom.length
+let longTabPrenom = tableau.tabPrenom.length
 
-console.log('max= ' + max)
+console.log('longTabNom= ' + longTabNom)
+console.log('longTabPrenom= ' + longTabPrenom)
 
 const peupler_json = () => {
 
@@ -17,5 +19,19 @@ const peupler_json = () => {
   return(tabVille)
 }
 
+
+const peupler_bd = (req,res,next) => {
+ res.resultat = peupler() 
+ console.log('début boucle') 
+ for (let elm of res.resultat)
+ {
+ db.collection('adresse').save(elm, (err, result) => {
+ if (err) return console.log(err)
+ //console.log('sauvegarder dans la BD') 
+ })
+ }
+ console.log('fin boucle') 
+ next()
+}
 
 module.exports = peupler_json
