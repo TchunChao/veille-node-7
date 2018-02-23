@@ -10,27 +10,28 @@ console.log('longTabPrenom= ' + longTabPrenom)
 const peupler_json = () => {
 
   let position 
-  let tabVille = []
-  for (let k=0 ; k<10; k++)
-	{
-		position = Math.floor(Math.random()*max)
-		tabVille.push(tableau[position])
-	}
-  return(tabVille)
+  let tabPersonne = []
+  let tabToutesLesPersonnes = []
+  for (let k=0 ; k<10; k++) 
+  {
+  		tabPersonne = []
+		position = Math.floor(Math.random()*longTabNom);
+		tabPersonne.push(tableau.tabNom[position])
+
+		position = Math.floor(Math.random()*longTabPrenom);
+		tabPersonne.push(tableau.tabPrenom[position])
+
+
+
+
+
+
+
+
+		tabToutesLesPersonnes.push(tabPersonne);
+  }
+  return(tabToutesLesPersonnes)
 }
 
 
-const peupler_bd = (req,res,next) => {
- res.resultat = peupler() 
- console.log('début boucle') 
- for (let elm of res.resultat) {
-	db.collection('adresse').save(elm, (err, result) => {
-		if (err) return console.log(err)
-	 	console.log('sauvegarder tableaux dans la BD') 
-	})
- }
- console.log('fin boucle') 
- next()
-}
-
-module.exports = peupler_bd
+module.exports = peupler_json

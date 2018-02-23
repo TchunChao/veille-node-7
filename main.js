@@ -139,5 +139,11 @@ app.get('/trier/:cle/:ordre', (req, res) => {
 app.get('/peupler', (req,res) =>{
 	//res.resultat = peupler_bd()
 	console.log('peupler')
+	let tableau = peupler();
+	console.log(tableau)
+	for(let i=0; i<10; i++) {
+
+	}
+
 	res.redirect('/adresse')
 })
